@@ -91,19 +91,15 @@ class NeumorphicApp extends StatelessWidget {
       ),
       iconTheme: theme.iconTheme,
       brightness: ThemeData.estimateBrightnessForColor(theme.baseColor),
-      primaryColorBrightness:
-          ThemeData.estimateBrightnessForColor(theme.accentColor),
       textTheme: theme.textTheme,
       scaffoldBackgroundColor: theme.baseColor,
-      
     );
   }
 
   @override
   Widget build(BuildContext context) {
     final materialTheme = this.materialTheme ?? _getMaterialTheme(theme);
-    final materialDarkTheme =
-        this.materialDarkTheme ?? _getMaterialTheme(darkTheme);
+    final materialDarkTheme = this.materialDarkTheme ?? _getMaterialTheme(darkTheme);
     return NeumorphicTheme(
       theme: theme,
       darkTheme: darkTheme,
